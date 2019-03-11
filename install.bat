@@ -10,7 +10,7 @@ pyarmor capsule --upgrade ~/
 pyarmor licenses -e %2 CODE
 powershell -c "Compress-Archive -Update licenses/CODE/license.lic -DestinationPath ~/.pyarmor_capsule.zip"
 powershell -c "sleep 0.1"
-pyarmor pack -e='--onefile' -O ../ %1
+pyarmor pack -e='--onefile' -O ./ %1
 
 powershell -c "rm -fo -r ~/.pyarmor_capsule.zip "
 powershell -c "rm -fo -r licenses "
